@@ -5,3 +5,10 @@ Import:
   circleci: github.com/bilus/circleci
 # Replace:
 #   github.com/bilus/circleci: ../circleci
+
+
+onMerge: |
+  echo "Merged to master"
+
+onPush: |
+  echo "Pushed to branch"
