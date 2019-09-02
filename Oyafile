@@ -1,6 +1,6 @@
 Project: github.com/bilus/circleci-demo
 Require:
-  github.com/bilus/circleci: v0.0.4
+  github.com/bilus/circleci: v0.0.5
 Import:
   circleci: github.com/bilus/circleci
 # Replace:
