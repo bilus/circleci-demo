@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 
 defaults: &defaults
   working_directory: ~/oya-project
@@ -17,14 +17,20 @@ commands:
           fi
       - run: echo -e "$PGP_KEY" | gpg --import
 
+# jobs:
+#   onPush:
+#     <<: *defaults
+#     steps:
+#       - import_pgp_key
+#       - checkout
+#       - run: |
+#           TERM=dumb echo "PATH: $PATH"
 jobs:
   onPush:
     <<: *defaults
     steps:
-      - import_pgp_key
-      - checkout
       - run: |
-          TERM=dumb echo "PATH: $PATH"
+          TERM=xterm echo "Hello"
 
   onMerge:
     <<: *defaults
