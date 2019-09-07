@@ -24,18 +24,15 @@ jobs:
       - import_pgp_key
       - checkout
       - run: |
-          set -e
-          export PATH=~/.oya/bin/oya:$PATH
-          oya run -r -c onPush
+          TERM=dumb echo "PATH: $PATH"
+
   onMerge:
     <<: *defaults
     steps:
       - import_pgp_key
       - checkout
       - run: |
-          set -e
-          export PATH=~/.oya/bin/oya:$PATH
-          oya run -r -c onPush
+          oya run -r -c onMerge
           oya run circleci.onMergeSuccess
 
 workflows:
