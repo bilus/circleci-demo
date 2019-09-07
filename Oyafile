@@ -13,3 +13,6 @@ onMerge: |
 
 onPush: |
   echo "Pushed to branch"
+
+test: |
+  echo "Foo"
