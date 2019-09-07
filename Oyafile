@@ -6,6 +6,7 @@ Import:
 # Replace:
 #   github.com/bilus/circleci: ../circleci
 
+Changeset: oya run circleci.Changeset
 
 onMerge: |
   echo "Merged to master"
