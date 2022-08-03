@@ -1,6 +1,0 @@
-onMerge: |
-  echo "Building app1"
-
-
-onPush: |
-  echo "Testing app1"
